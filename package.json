@@ -1,0 +1,22 @@
+{
+  "name": "monorepo-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kulivox/monorepo-template.git"
+  },
+  "author": "Michal Klinka",
+  "license": "SEE LICENSE IN License",
+  "bugs": {
+    "url": "https://github.com/Kulivox/monorepo-template/issues"
+  },
+  "homepage": "https://github.com/Kulivox/monorepo-template#readme",
+  "description": ""
+}
