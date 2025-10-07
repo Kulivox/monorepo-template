@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+      <UserSecretsId>4ccb338c-4f37-4331-a63c-1cda86c0e14b</UserSecretsId>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.ApiDescription.Server">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <OpenApiDocumentsDirectory>..\..\..\..\</OpenApiDocumentsDirectory>
+        <OpenApiGenerateDocumentsOptions>--file-name dotnet-openapi-spec</OpenApiGenerateDocumentsOptions>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\DotnetTemplate.Application\DotnetTemplate.Application.csproj" />
+      <ProjectReference Include="..\DotnetTemplate.Domain\DotnetTemplate.Domain.csproj" />
+      <ProjectReference Include="..\DotnetTemplate.Infrastructure\DotnetTemplate.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
